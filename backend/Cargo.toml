@@ -1,0 +1,9 @@
+[package]
+name = "chipereganyu_api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = {version = "0.6.20", features=["headers"]}
+tokio = {version = "1.33.0", features= ["full"]}
+serde_json = { version = "1.0", default-features = false, features = ["alloc"] }

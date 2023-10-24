@@ -1,3 +1,4 @@
+
 use axum::{routing::get, Router};
 use crate::resources::health::health_service;
 pub fn merge_routes() -> Router {

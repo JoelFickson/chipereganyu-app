@@ -1,0 +1,40 @@
+name: Lint, Test and Build Docker Image
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+
+jobs:
+  check-frontend-code:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+    steps:
+      - uses: actions/checkout@v3
+
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Lint code
+        run: npm run format
+
+      - name: Build the application
+        run:
+          npm run build
+
+  check-backend-code:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: build backend
+        run: cargo build
+

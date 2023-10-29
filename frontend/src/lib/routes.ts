@@ -8,8 +8,8 @@ const Routes = [
 		name: 'About'
 	},
 	{
-		path: '/developers',
-		name: 'For Developers'
+		path: '/register',
+		name: 'Register'
 	}
 ];
 

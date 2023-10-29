@@ -40,7 +40,7 @@
     }
 
     .button-style {
-        @apply bg-slate-600 hover:bg-slate-900 text-white font-semibold py-2 px-4  shadow-md transition duration-300 ease-in-out
+        @apply bg-primary-color-500 rounded hover:bg-slate-900 text-white font-semibold py-3 px-4  shadow-md transition duration-300 ease-in-out
     }
 
 }

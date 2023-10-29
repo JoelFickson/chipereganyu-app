@@ -12,7 +12,7 @@
     }
 </script>
 
-<nav class="relative flex flex-wrap items-center justify-between py-2 bg-slate-600 text-white ">
+<nav class="relative flex flex-wrap items-center justify-between py-2 bg-primary-color-500 text-white ">
     <div class="container flex flex-wrap items-center justify-between px-4 mx-auto">
         <div class="relative flex justify-between w-full lg:w-auto lg:static lg:block lg:justify-start">
             <a class="flex   items-center justify-center py-2 mr-4 font-bold leading-relaxed uppercase"

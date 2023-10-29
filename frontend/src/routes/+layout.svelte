@@ -5,7 +5,7 @@
 
 <NavBar/>
 
-<div class='min-h-screen flex justify-center bg-gradient-to-b from-emerald-50 to-stone-400'>
+<div class='min-h-screen flex justify-center bg-gradient-to-b from-primary-color-500 to-accent-color-50'>
     <slot/>
 </div>
 

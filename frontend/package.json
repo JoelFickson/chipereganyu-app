@@ -32,6 +32,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"svelte-forms": "^2.3.1",
 		"svelte-icons": "^2.1.0",
 		"unplugin-icons": "^0.17.1"
 	}

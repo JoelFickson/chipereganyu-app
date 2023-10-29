@@ -7,3 +7,6 @@ edition = "2021"
 axum = {version = "0.6.20", features=["headers"]}
 tokio = {version = "1.33.0", features= ["full"]}
 serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
+log = "0.4.20"
+serde = { version = "1.0.189", features = ["derive"] }
+cargo-watch = "8.4.1"

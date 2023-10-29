@@ -25,7 +25,8 @@ pub struct Group {
     id: String,
     name: String,
     total_members: i32,
-    admins: Vec<String>
+    admins: Vec<String>,
+    group_owner: String
 }
 ```
 

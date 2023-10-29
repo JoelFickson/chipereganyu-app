@@ -1,15 +1,6 @@
-mod config {
-    pub mod server;
-}
-
-mod resources {
-
-    pub mod routes;
-    pub mod health{
-         pub mod health_service;
-     }
-}
-
+mod config;
+mod models;
+mod resources;
 
 #[tokio::main]
 async fn main() {

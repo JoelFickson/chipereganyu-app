@@ -1,11 +1,17 @@
-FROM rust:1.73-slim-bullseye
+FROM rust:latest
 
+WORKDIR /usr/src/chipereganyu_api
 
-WORKDIR /app
+COPY .env .env
+
+ENV DB_HOST=${DB_HOST} \
+    DB_PORT=${DB_PORT} \
+    DB_USER=${DB_USER} \
+    DB_PASSWORD=${DB_PASSWORD} \
+    DB_NAME=${DB_NAME}
 
 COPY . .
 
 RUN cargo build --release
 
-
-CMD ["./target/release/api-gateway"]
+CMD ["/usr/src/chipereganyu_api"]

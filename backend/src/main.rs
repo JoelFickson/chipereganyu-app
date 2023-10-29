@@ -1,6 +1,4 @@
 mod config;
-
-
 mod models;
 mod resources;
 

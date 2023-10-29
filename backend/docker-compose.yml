@@ -5,6 +5,20 @@ services:
     build: .
     container_name: chipereganyu-api
     ports:
-      - '7777:7777'
+      - 7777:7777
     volumes:
       - .:/usr/src/chipereganyu-api
+  database_service:
+    image: postgres:latest-alpine
+    container_name: chipereganyu_database
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+    volumes:
+      - chipereganyu_db_dir:/var/lib/postgresql/data
+
+volumes:
+  chipereganyu_db_dir:

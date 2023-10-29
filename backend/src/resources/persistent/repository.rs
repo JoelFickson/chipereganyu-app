@@ -1,19 +1,13 @@
-use sea_orm::entity::prelude::*;
-use sea_orm::Insert;
+use crate::models::database::DatabaseParam;
 
-async fn create<T, DB>(data: T, db: &DB) -> Result<T, E>
-    where
-        DB: sea_orm::DatabaseConnection,
-        T: Entity,
-{
-    let mut model = data.into_active_model();
-    let id = db
-        .insert(model)
-        .await?
-        .last_insert_id()
-        .ok_or(E::DatabaseError)?;
+pub async fn create<T>(data: DatabaseParam<T>) -> (){
+    todo!()
+}
 
-    model.set_id(id);
+pub async fn get_all()->(){
 
-    Ok(model.into())
+}
+
+pub async fn get_one<T>(data: DatabaseParam<T>)-> (){
+
 }

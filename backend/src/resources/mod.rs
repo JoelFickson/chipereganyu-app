@@ -1,6 +1,5 @@
 pub mod groups;
-pub mod members;
 pub mod health;
-pub mod routes;
-
+pub mod members;
 pub mod persistent;
+pub mod routes;

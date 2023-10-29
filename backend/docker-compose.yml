@@ -2,17 +2,19 @@ version: '3.8'
 
 services:
   chipereganyu-api:
+    depends_on:
+      - database_service
     build: .
     container_name: chipereganyu-api
     ports:
-      - 7777:7777
+      - 7777:8777
     volumes:
       - .:/usr/src/chipereganyu-api
   database_service:
-    image: postgres:latest-alpine
+    image: postgres:16-alpine
     container_name: chipereganyu_database
     ports:
-      - 5432:5432
+      - 5466:5432
     environment:
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}

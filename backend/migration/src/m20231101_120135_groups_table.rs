@@ -1,6 +1,6 @@
 use sea_orm_migration::prelude::*;
 
-use crate::m20231029_193540_users_table::Users;
+use crate::m20231101_120130_users_table::Users;
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;

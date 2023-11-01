@@ -3,11 +3,18 @@ name = "chipereganyu_api"
 version = "0.1.0"
 edition = "2021"
 
+[workspace]
+members = [".", "entity", "migration"]
+
 [dependencies]
-axum = {version = "0.6.20", features=["headers"]}
-tokio = {version = "1.33.0", features= ["full"]}
+entity = { path = "entity" }
+migration = { path = "migration" }
+axum = { version = "0.6.20", features = ["headers"] }
+tokio = { version = "1.33.0", features = ["full"] }
 serde_json = { version = "1.0", default-features = false, features = ["alloc"] }
 log = "0.4.20"
 serde = { version = "1.0.189", features = ["derive"] }
 cargo-watch = "8.4.1"
-sea-orm = { version ="0.12.4",  features = ["sqlx-postgres",  "runtime-tokio"] }
+sea-orm = { version = "0.12.4", features = ["sqlx-postgres", "runtime-tokio"] }
+anyhow = "1.0.75"
+dotenv = "0.15.0"

@@ -1,19 +1,20 @@
 use serde::{Deserialize, Serialize};
 
+#[derive(Debug, Deserialize, Serialize)]
 pub struct User {
-    id: String,
-    name: String,
-    phone: String,
-    photo: String,
-    password: String,
+    pub id: String,
+    pub name: String,
+    pub phone: String,
+    pub photo: String,
+    pub password: String,
 }
 
 #[derive(Debug, Deserialize, Serialize)]
 pub struct NewUser {
-    name: String,
-    phone: String,
-    photo: String,
-    password: String,
+    pub name: String,
+    pub phone: String,
+    pub photo: Option<String>,
+    pub password: String,
 }
 
 #[derive(Debug, Deserialize, Serialize)]

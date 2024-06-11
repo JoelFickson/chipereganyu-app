@@ -1,4 +1,5 @@
-pub struct DatabaseParam<T>{
+#[derive(Debug)]
+pub struct DatabaseParam<T> {
     table: String,
-    data: T
+    data: T,
 }
